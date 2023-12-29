@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/styles.css" rel="stylesheet"/>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div class="header">
+        <nav>   
+            <ul calss="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About as</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="content">
+        <input id="score" type="text" value="0" style="display: none;"/>
+       
+        <div class="bloc-quiz" id="bloc-question">
+            <span id="counter"></span>
+            <div class="question" id="question0">
+                <h1>Question: If you have 5 apples and you eat 2, how many apples do you have left?</h1>
+                <label class="container">2
+                <input type="radio" name="radio" class="choices">
+                <span class="checkmark"></span>
+                </label>
+                <label class="container">3
+                <input type="radio" name="radio" value="correct" class="choices">
+                <span class="checkmark"></span>
+                </label>
+                <label class="container">4
+                <input type="radio" name="radio" class="choices">
+                <span class="checkmark"></span>
+                </label>
+                <label class="container">5
+                <input type="radio" name="radio" class="choices">
+                <span class="checkmark"></span>
+                </label>
+
+                <button onclick="next(1, 'question0')" class="next-btn">Next</button>
+            </div>
+            <div class="question question1 hide" id="question1">
+                <h1>Question: What is the result of adding 8 and 6?</h1>
+                <label class="container">12
+                <input type="radio" name="radio" class="choices">
+                <span class="checkmark"></span>
+                </label>
+                <label class="container">9
+                <input type="radio" name="radio" class="choices">
+                <span class="checkmark"></span>
+                </label>
+                <label class="container">10
+                <input type="radio" name="radio" class="choices">
+                <span class="checkmark"></span>
+                </label>
+                <label class="container">14
+                <input type="radio" name="radio" class="choices" value="correct">
+                <span class="checkmark"></span>
+                </label>
+
+                <button onclick="next(2, 'question1')" class="next-btn">Next</button>
+            </div>
+            <div class="question question2 hide" id="question2">
+                <h1>Question: If you have 3 groups of 4 toys, how many toys do you have in total?</h1>
+                <label class="container">15
+                <input type="radio" name="radio" class="choices">
+                <span class="checkmark"></span>
+                </label>
+                <label class="container">12
+                <input type="radio" name="radio" class="choices" value="correct">
+                <span class="checkmark"></span>
+                </label>
+                <label class="container">16
+                <input type="radio" name="radio" class="choices">
+                <span class="checkmark"></span>
+                </label>
+                <label class="container">18
+                <input type="radio" name="radio" class="choices">
+                <span class="checkmark"></span>
+                </label>
+
+                <button onclick="next(3, 'question2')" class="next-btn">Next</button>
+            </div>
+
+            <div class="question question3 hide" id="question3">
+                <h1>Question: Which of the following shapes has three sides?</h1>
+                <label class="container">Triangle
+                    <input type="radio" name="radio" class="choices" value="correct">
+                    <span class="checkmark"></span>
+                    </label>
+                <label class="container">Rectangle
+                <input type="radio" name="radio" class="choices">
+                <span class="checkmark"></span>
+                </label>
+                <label class="container">Square
+                <input type="radio" name="radio" class="choices">
+                <span class="checkmark"></span>
+                </label>
+                <label class="container">Circle
+                <input type="radio" name="radio" class="choices">
+                <span class="checkmark"></span>
+                </label>
+                <button onclick="next(4, 'question3')" class="next-btn">Next</button>
+            </div>
+
+
+            <div class="question question4 hide" id="question4">
+                <h1>Question: If you count by twos, what comes after 8?</h1>
+                <label class="container"> 7
+                <input type="radio" name="radio" class="choices">
+                <span class="checkmark"></span>
+                </label>
+                <label class="container">9
+                <input type="radio" name="radio" class="choices">
+                <span class="checkmark"></span>
+                </label>
+                <label class="container">10
+                <input type="radio" name="radio" class="choices" value="correct">
+                <span class="checkmark"></span>
+                </label>
+                <label class="container"> 5
+                <input type="radio" name="radio" class="choices">
+                <span class="checkmark"></span>
+                </label>
+
+                <button onclick="result('question4')" class="next-btn">Result</button>
+            </div>  
+            
+        </div>
+
+        <div class="bloc-quiz hide" id="bloc-score">
+            <div class="result-score-text">
+                Your score is: <h1 id="result-text"></h1>
+
+                <button class="next-btn">
+                    <a href="play-math.html">Restart</a>
+                </button>
+            </div>
+        </div>
+    </div>
+ 
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/styles.css" rel="stylesheet"/>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div class="header">
+        <nav>   
+            <ul calss="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About as</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="content">
+        <input id="score" type="text" value="0" style="display: none;"/>
+       
+        <div class="bloc-quiz" id="bloc-question">
+            <span id="counter"></span>
+            <div class="question" id="question0">
+                <h1>Question: What is the capital city of France?</h1>
+                <label class="container">London
+                <input type="radio" name="radio" class="choices">
+                <span class="checkmark"></span>
+                </label>
+                <label class="container">Paris
+                <input type="radio" name="radio" value="correct" class="choices">
+                <span class="checkmark"></span>
+                </label>
+                <label class="container">Rome
+                <input type="radio" name="radio" class="choices">
+                <span class="checkmark"></span>
+                </label>
+                <label class="container">Berlin
+                <input type="radio" name="radio" class="choices">
+                <span class="checkmark"></span>
+                </label>
+
+                <button onclick="next(1, 'question0')" class="next-btn">Next</button>
+            </div>
+            <div class="question question1 hide" id="question1">
+                <h1>Question: Which continent is known as the 'Land Down Under'?</h1>
+                <label class="container">North America
+                <input type="radio" name="radio" class="choices">
+                <span class="checkmark"></span>
+                </label>
+                <label class="container">Europe
+                <input type="radio" name="radio" class="choices">
+                <span class="checkmark"></span>
+                </label>
+                <label class="container">Africa
+                <input type="radio" name="radio" class="choices">
+                <span class="checkmark"></span>
+                </label>
+                <label class="container">Australia
+                <input type="radio" name="radio" class="choices" value="correct">
+                <span class="checkmark"></span>
+                </label>
+
+                <button onclick="next(2, 'question1')" class="next-btn">Next</button>
+            </div>
+            <div class="question question2 hide" id="question2">
+                <h1>Question: What is the longest river in the world?</h1>
+                <label class="container">Amazon River
+                <input type="radio" name="radio" class="choices">
+                <span class="checkmark"></span>
+                </label>
+                <label class="container">Nile River
+                <input type="radio" name="radio" class="choices" value="correct">
+                <span class="checkmark"></span>
+                </label>
+                <label class="container">Yangtze River
+                <input type="radio" name="radio" class="choices">
+                <span class="checkmark"></span>
+                </label>
+                <label class="container">Mississippi River
+                <input type="radio" name="radio" class="choices">
+                <span class="checkmark"></span>
+                </label>
+
+                <button onclick="next(3, 'question2')" class="next-btn">Next</button>
+            </div>
+
+            <div class="question question3 hide" id="question3">
+                <h1>Question: Which of these countries is known for its pyramids?</h1>
+                <label class="container">Egypt
+                    <input type="radio" name="radio" class="choices" value="correct">
+                    <span class="checkmark"></span>
+                    </label>
+                <label class="container">Greece
+                <input type="radio" name="radio" class="choices">
+                <span class="checkmark"></span>
+                </label>
+                <label class="container">Brazil
+                <input type="radio" name="radio" class="choices">
+                <span class="checkmark"></span>
+                </label>
+                <label class="container">Japan
+                <input type="radio" name="radio" class="choices">
+                <span class="checkmark"></span>
+                </label>
+                <button onclick="next(4, 'question3')" class="next-btn">Next</button>
+            </div>
+
+
+            <div class="question question4 hide" id="question4">
+                <h1>Question: Which mountain range is often referred to as the 'Roof of the World'?</h1>
+                <label class="container"> Rocky Mountains
+                <input type="radio" name="radio" class="choices">
+                <span class="checkmark"></span>
+                </label>
+                <label class="container">Alps
+                <input type="radio" name="radio" class="choices">
+                <span class="checkmark"></span>
+                </label>
+                <label class="container">Himalayas
+                <input type="radio" name="radio" class="choices" value="correct">
+                <span class="checkmark"></span>
+                </label>
+                <label class="container"> Andes Mountains
+                <input type="radio" name="radio" class="choices">
+                <span class="checkmark"></span>
+                </label>
+
+                <button onclick="result('question4')" class="next-btn">Result</button>
+            </div>  
+            
+        </div>
+
+        <div class="bloc-quiz hide" id="bloc-score">
+            <div class="result-score-text">
+                Your score is: <h1 id="result-text"></h1>
+
+                <button class="next-btn">
+                    <a href="play-geo.html">Restart</a>
+                </button>
+            </div>
+
+            
+        </div>
+    </div>
+ 
+    <script src="js/script.js"></script>
+</body>
+</html>
