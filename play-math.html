@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Quiz Game</title>
     <link href="css/styles.css" rel="stylesheet"/>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 <body>
-    <div class="header">
-        <nav>   
-            <ul calss="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About as</a></li>
-            </ul>
-        </nav>
-    </div>
+    <div class="navbar">
+        <a class="active" href="index.html">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <div class="navbar-right">
+          <a href="#login">Login</a>
+          <a href="#signup">Sign Up</a>
+        </div>
+      </div>
     <div class="content">
         <input id="score" type="text" value="0" style="display: none;"/>
        
